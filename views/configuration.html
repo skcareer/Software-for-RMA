@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuration</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/newVerticalNavbar.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar fixed-top navbar-expand-lg mobile-navbar">
+      <a class="navbar-brand" href="#"><img src="assets/images/kmf-logo.jpg" alt="logo">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "><img src="assets/icons/hamburger-menu.svg" alt=""></span>
+      </button>
+
+      <div class="collapse navbar-collapse menu-items-div" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 list-items-group">
+          <li><a href="#"><span><img class="menu-icon" src="assets/icons/dashboard.png" alt="icon"></span><span
+                class="menu-item">Dashboard</span></a></li>
+
+          <li class="dropdown-menu-item">
+            <a href="#" class="dropdown-btn"><span><img class="menu-icon" src="assets/icons/diagnostics.png"
+                  alt="icon"></span><span class="menu-item">Diagnostics <img src="assets/icons/chevron-down.png"
+                  alt=""></span>
+            </a>
+            <div class="dropdown-container">
+              <a href="/diagnostics-ac-meter">AC Meter</a>
+              <a href="/diagnostics-dc-meter">DC Meter</a>
+              <a href="/diagnostics-other-info">Other Info</a>
+            </div>
+          </li>
+
+          <li><a href="#"><span><img class="menu-icon" src="assets/icons/settings.svg" alt="icon"></span><span
+                class="menu-item">Configuration</span></a></li>
+          <li><a href="/dataExport"><span><img class="menu-icon" src="assets/icons/download.svg" alt="icon"></span><span
+                class="menu-item">Data Export</span></a></li>
+          <li><a href="/dataAlarms"><span><img class="menu-icon" src="assets/icons/alarm.svg" alt="icon"></span><span
+                class="menu-item">Alarms</span></a></li>
+          <li><a href="/trendlines"><span><img class="menu-icon" src="assets/icons/trendlines.png"
+                  alt="icon"></span><span class="menu-item">Trendlines</span></a></li>
+          <li><a href="/reboot-now"><span><img class="menu-icon" src="assets/icons/reset.png" alt="icon"></span><span
+                class="menu-item">Reboot</span></a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="wrapper row">
+
+      <section id="vertical-menu-bar" class="vertical-menu-bar col-lg-2 ">
+        <div class="logo-div flex-row">
+          <img src="assets/images/kmf-logo.jpg" alt="logo">
+        </div>
+        <div class="menu-items-div">
+          <ul class="list-items-group">
+            <li><a href="/dashboard"><span><img class="menu-icon" src="assets/icons/dashboard.png"
+                    alt="icon"></span><span class="menu-item">Dashboard</span></a></li>
+
+            <li>
+              <a href="#" class="dropdown-btn"><span><img class="menu-icon" src="assets/icons/diagnostics.png"
+                    alt="icon"></span><span class="menu-item">Diagnostics <img src="assets/icons/chevron-down.png"
+                    alt=""></span>
+              </a>
+              <div class="dropdown-container">
+                <a href="/diagnostics-ac-meter">AC Meter</a>
+                <a href="/diagnostics-dc-meter">DC Meter</a>
+                <a href="/diagnostics-other-info">Other Info</a>
+              </div>
+            </li>
+
+            <li><a href="#"><span><img class="menu-icon" src="assets/icons/settings.svg" alt="icon"></span><span
+                  class="menu-item">Configuration</span></a></li>
+            <li><a href="/dataExport"><span><img class="menu-icon" src="assets/icons/download.svg"
+                    alt="icon"></span><span class="menu-item">Data Export</span></a></li>
+            <li><a href="/dataAlarms"><span><img class="menu-icon" src="assets/icons/alarm.svg" alt="icon"></span><span
+                  class="menu-item">Alarms</span></a></li>
+            <li><a href="/trendlines"><span><img class="menu-icon" src="assets/icons/trendlines.png"
+                    alt="icon"></span><span class="menu-item">Trendlines</span></a></li>
+            <li><a href="/reboot-now"><span><img class="menu-icon" src="assets/icons/reset.png" alt="icon"></span><span
+                  class="menu-item">Reboot</span></a></li>
+          </ul>
+
+        </div>
+
+      </section>
+
+      <div class="configurations-page-content col-lg-10 col-12 col-md-12 row">
+
+        <div class="col" id="create-configuration-div">
+          <div class="row">
+            <div class="create-config-form flex-col">
+              <h4 style="text-align:center;"></h4>
+              <form id="form" class="form" action="/api/createoperation" method="POST">
+                <div class="form-item-wrapper">
+                  <label for="siteName" class="custom-control-label">Site Name</label>
+                  <input type="text" id="siteName" name="siteName" placeholder="Site Name" required>
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="siteId" class="custom-control-label">Site ID</label>
+                  <input type="text" id="siteId" name="siteId" placeholder="Site ID" required>
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="region" class="custom-control-label">Region</label>
+                  <input type="text" id="region" name="region" placeholder="Region" required>
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="address" class="custom-control-label">Address</label>
+                  <input type="text" id="address" name="address" placeholder="Address" required>
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="latitude" class="custom-control-label">Latitude</label>
+                  <input type="number" step="any" id="latitude" name="latitude" placeholder="Latitude" required>
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="longitude" class="custom-control-label">Longitude</label>
+                  <input type="number" step="any" id="longitude" name="longitude" placeholder="Longitude" required>
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="tenant1" class="custom-control-label">Tenant 1</label>
+                  <input type="text" id="tenant1" name="tenant1" placeholder="Tenant 1">
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="tenant2" class="custom-control-label">Tenant 2</label>
+                  <input type="text" id="tenant2" name="tenant2" placeholder="Tenant 2">
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="tenant3" class="custom-control-label">Tenant 3</label>
+                  <input type="text" id="tenant3" name="tenant3" placeholder="Tenant 3">
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="tenant4" class="custom-control-label">Tenant 4</label>
+                  <input type="text" id="tenant4" name="tenant4" placeholder="Tenant 4">
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="tenant5" class="custom-control-label">Tenant 5</label>
+                  <input type="text" id="tenant5" name="tenant5" placeholder="Tenant 5">
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="tenant6" class="custom-control-label">Tenant 6</label>
+                  <input type="text" id="tenant6" name="tenant6" placeholder="Tenant 6">
+                </div>
+
+                <div class="form-item-wrapper">
+                  <label for="gensetCapacity" class="custom-control-label">Genset Capacity</label>
+                  <input type="number" step="any" id="gensetCapacity" name="gensetCapacity" placeholder="Generator Capacity" required>
+                </div>
+
+
+
+
+                <div class="form-button-div">
+                  <button id="editButton" class="btn btn-success text-center">Edit</button>
+                  <button id="resetButton" class="btn btn-danger text-center">Reset Default</button>
+                  <button id="submitButton" class="btn btn-primary text-center">Submit!</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="js/axios.min.js"></script>
+  <script src="js/configuration.js"></script>
+  <script src="js/newVerticalNavbar.js"></script>
+
+  <script src="js/jquery.3.2.1.js"></script>
+  <script src="js/popper.1.12.9.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

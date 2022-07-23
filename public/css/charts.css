@@ -1,0 +1,16 @@
+.gauge-container > .gauge > .dial {
+    /* stroke: #334455; */
+    stroke: black;
+    stroke-width: 6;
+    width: 100%;
+  }
+
+  .gauge-container > svg > g > .value-text{
+      font-size: 2.25rem;
+      fill: rgb(47, 227, 255);
+      fill: black;
+    font-weight: bold;;
+  }
+  g{
+      transform: translate(0%, -20%);
+  }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnostics Other Info</title>
+  <link rel="stylesheet" href="css/tabulator.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- <link rel="stylesheet" href="/css/jquery-ui.min.css"> -->
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/newVerticalNavbar.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar fixed-top navbar-expand-lg mobile-navbar">
+      <a class="navbar-brand" href="#"><img src="assets/images/kmf-logo.jpg" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "><img src="assets/icons/hamburger-menu.svg" alt=""></span>
+      </button>
+
+      <div class="collapse navbar-collapse menu-items-div" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 list-items-group">
+          <li><a href="/dashboard"><span><img class="menu-icon" src="assets/icons/dashboard.png" alt="icon"></span><span
+                class="menu-item">Dashboard</span></a></li>
+
+          <li class="dropdown-menu-item">
+            <a href="#" class="dropdown-btn"><span><img class="menu-icon" src="assets/icons/diagnostics.png"
+                  alt="icon"></span><span class="menu-item">Diagnostics <img src="assets/icons/chevron-down.png"
+                  alt=""></span>
+            </a>
+            <div class="dropdown-container">
+              <a href="/diagnostics-ac-meter">AC Meter</a>
+              <a href="/diagnostics-dc-meter">DC Meter</a>
+              <a href="#">Other Info</a>
+            </div>
+          </li>
+
+          <li><a href="/configOperation"><span><img class="menu-icon" src="assets/icons/settings.svg"
+                  alt="icon"></span><span class="menu-item">Configuration</span></a></li>
+          <li><a href="/dataExport"><span><img class="menu-icon" src="assets/icons/download.svg" alt="icon"></span><span
+                class="menu-item">Data Export</span></a></li>
+          <li><a href="/dataAlarms"><span><img class="menu-icon" src="assets/icons/alarm.svg" alt="icon"></span><span
+                class="menu-item">Alarms</span></a></li>
+          <li><a href="/trendlines"><span><img class="menu-icon" src="assets/icons/trendlines.png"
+                  alt="icon"></span><span class="menu-item">Trendlines</span></a></li>
+          <li><a href="/reboot-now"><span><img class="menu-icon" src="assets/icons/reset.png" alt="icon"></span><span
+                class="menu-item">Reboot</span></a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="wrapper row">
+      <section id="vertical-menu-bar" class="vertical-menu-bar col-lg-2 ">
+        <div class="logo-div flex-row">
+          <img src="assets/images/kmf-logo.jpg" alt="logo">
+        </div>
+        <div class="menu-items-div">
+
+          <ul class="list-items-group">
+            <li><a href="/dashboard"><span><img class="menu-icon" src="assets/icons/dashboard.png"
+                    alt="icon"></span><span class="menu-item">Dashboard</span></a></li>
+
+            <li>
+              <a href="#" class="dropdown-btn"><span><img class="menu-icon" src="assets/icons/diagnostics.png"
+                    alt="icon"></span><span class="menu-item">Diagnostics <img src="assets/icons/chevron-down.png"
+                    alt=""></span>
+              </a>
+              <div class="dropdown-container">
+                <a href="/diagnostics-ac-meter">AC Meter</a>
+                <a href="/diagnostics-dc-meter">DC Meter</a>
+                <a href="#">Other Info</a>
+              </div>
+            </li>
+
+            <li><a href="/configOperation"><span><img class="menu-icon" src="assets/icons/settings.svg"
+                    alt="icon"></span><span class="menu-item">Configuration</span></a></li>
+            <li><a href="/dataExport"><span><img class="menu-icon" src="assets/icons/download.svg"
+                    alt="icon"></span><span class="menu-item">Data Export</span></a></li>
+            <li><a href="/dataAlarms"><span><img class="menu-icon" src="assets/icons/alarm.svg" alt="icon"></span><span
+                  class="menu-item">Alarms</span></a></li>
+            <li><a href="/trendlines"><span><img class="menu-icon" src="assets/icons/trendlines.png"
+                    alt="icon"></span><span class="menu-item">Trendlines</span></a></li>
+            <li><a href="/reboot-now"><span><img class="menu-icon" src="assets/icons/reset.png" alt="icon"></span><span
+                  class="menu-item">Reboot</span></a></li>
+          </ul>
+
+        </div>
+
+      </section>
+
+      <section class="diagnostics-section col-lg-10 col-12 col-md-12">
+
+        <div class="diagnostics-content-wrapper flex-col">
+          <h2 class="text-center"> I2C Data from KmfBoard </h2>
+          <div id="i2c-data-div" class="diagnostics-data-div">
+
+          </div>
+        </div>
+
+        <!-- <footer>Powered by www.kmfconcept.com</footer> -->
+
+      </section>
+
+    </div>
+  </div>
+  <script src="js/axios.min.js"></script>
+  <script src="js/dashboardData.js"></script>
+
+  <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script src="js/newVerticalNavbar.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/i2c-data.js"></script>
+</body>
+
+</html>

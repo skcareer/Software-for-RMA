@@ -1,0 +1,28 @@
+{
+  "name": "rma",
+  "version": "1.0.0",
+  "description": "A remote monitoring agent (rma) software  for telecommunication remotemonitoring electrical dispenser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sunkanmi Oluwaleye",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "i2c-bus": "^5.2.2",
+    "internet-available": "^1.0.0",
+    "modbus-serial": "^8.0.1",
+    "mongoose": "^4.13.18",
+    "node-cmd": "^5.0.0",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "winston": "^3.3.3"
+  }
+}

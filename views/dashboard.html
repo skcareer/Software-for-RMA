@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/newVerticalNavbar.css">
+    <link rel="stylesheet" href="css/generatorGauge.css" />
+    <link rel="stylesheet" href="css/jsProgressGauge.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>RMA - Dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="navbar fixed-top navbar-expand-lg mobile-navbar">
+            <a class="navbar-brand" href="#"><img src="assets/images/kmf-logo.jpg" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "><img src="assets/icons/hamburger-menu.svg" alt=""></span>
+            </button>
+
+            <div class="collapse navbar-collapse menu-items-div" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 list-items-group admin">
+                    <li><a href="#"><span><img class="menu-icon" src="assets/icons/dashboard.png"
+                                    alt="icon"></span><span class="menu-item">Dashboard</span></a></li>
+
+                    <li class="dropdown-menu-item">
+                        <a href="#" class="dropdown-btn"><span><img class="menu-icon" src="assets/icons/diagnostics.png"
+                                    alt="icon"></span><span class="menu-item">Diagnostics <img
+                                    src="assets/icons/chevron-down.png" alt=""></span>
+                        </a>
+                        <div class="dropdown-container">
+                            <a href="/diagnostics-ac-meter">AC Meter</a>
+                            <a href="/diagnostics-dc-meter">DC Meter</a>
+                            <a href="/diagnostics-other-info">Other Info</a>
+                        </div>
+                    </li>
+
+                    <li><a href="/configOperation"><span><img class="menu-icon" src="assets/icons/settings.svg"
+                                    alt="icon"></span><span class="menu-item">Configuration</span></a></li>
+                    <li><a href="/dataExport"><span><img class="menu-icon" src="assets/icons/download.svg"
+                                    alt="icon"></span><span class="menu-item">Data Export</span></a></li>
+                    <li><a href="/dataAlarms"><span><img class="menu-icon" src="assets/icons/alarm.svg"
+                                    alt="icon"></span><span class="menu-item">Alarms</span></a></li>
+                    <li><a href="/trendlines"><span><img class="menu-icon" src="assets/icons/trendlines.png"
+                                    alt="icon"></span><span class="menu-item">Trendlines</span></a></li>
+                    <li><a href="/reboot-now"><span><img class="menu-icon" src="assets/icons/reset.png"
+                                    alt="icon"></span><span class="menu-item">Reboot</span></a></li>
+                </ul>
+
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 list-items-group operator">
+                    <li><a href="#"><span><img class="menu-icon" src="assets/icons/dashboard.png"
+                                    alt="icon"></span><span class="menu-item">Dashboard</span></a></li>
+                    <li><a href="/dataAlarms"><span><img class="menu-icon" src="assets/icons/alarm.svg"
+                                    alt="icon"></span><span class="menu-item">Alarms</span></a></li>
+                    <li><a href="/trendlines"><span><img class="menu-icon" src="assets/icons/trendlines.png"
+                                    alt="icon"></span><span class="menu-item">Trendlines</span></a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+        <div class="wrapper row">
+            <section id="vertical-menu-bar" class="vertical-menu-bar col-lg-2 ">
+                <div class="logo-div flex-row">
+                    <img src="assets/images/kmf-logo.jpg" alt="logo">
+                </div>
+                <div class="menu-items-div">
+
+                    <ul class="list-items-group admin">
+                        <li><a href="#"><span><img class="menu-icon" src="assets/icons/dashboard.png"
+                                        alt="icon"></span><span class="menu-item">Dashboard</span></a></li>
+
+                        <li class="dropdown-menu-item">
+                            <a href="#" class="dropdown-btn"><span><img class="menu-icon"
+                                        src="assets/icons/diagnostics.png" alt="icon"></span><span
+                                    class="menu-item">Diagnostics <img src="assets/icons/chevron-down.png"
+                                        alt=""></span>
+                            </a>
+                            <div class="dropdown-container">
+                                <a href="/diagnostics-ac-meter">AC Meter</a>
+                                <a href="/diagnostics-dc-meter">DC Meter</a>
+                                <a href="/diagnostics-other-info">Other Info</a>
+                            </div>
+                        </li>
+
+                        <li><a href="/configOperation"><span><img class="menu-icon" src="assets/icons/settings.svg"
+                                        alt="icon"></span><span class="menu-item">Configuration</span></a></li>
+                        <li><a href="/dataExport"><span><img class="menu-icon" src="assets/icons/download.svg"
+                                        alt="icon"></span><span class="menu-item">Data Export</span></a></li>
+                        <li><a href="/dataAlarms"><span><img class="menu-icon" src="assets/icons/alarm.svg"
+                                        alt="icon"></span><span class="menu-item">Alarms</span></a></li>
+                        <li><a href="/trendlines"><span><img class="menu-icon" src="assets/icons/trendlines.png"
+                                        alt="icon"></span><span class="menu-item">Trendlines</span></a></li>
+                        <li><a href="/reboot-now"><span><img class="menu-icon" src="assets/icons/reset.png"
+                                        alt="icon"></span><span class="menu-item">Reboot</span></a></li>
+                    </ul>
+
+                    <ul class="list-items-group operator">
+                        <li><a href="#"><span><img class="menu-icon" src="assets/icons/dashboard.png"
+                                        alt="icon"></span><span class="menu-item">Dashboard</span></a></li>
+                        <li><a href="/dataAlarms"><span><img class="menu-icon" src="assets/icons/alarm.svg"
+                                        alt="icon"></span><span class="menu-item">Alarms</span></a></li>
+                        <li><a href="/trendlines"><span><img class="menu-icon" src="assets/icons/trendlines.png"
+                                        alt="icon"></span><span class="menu-item">Trendlines</span></a></li>
+                        
+                    </ul>
+                </div>
+
+            </section>
+
+            <section class="page-content col-12 col-lg-10 col-md-12">
+
+                <div class="dashboard-header-div flex-row row">
+
+                    <div class="col-md-3 header-card-group">
+                        <div class="flex-row header-card">
+                            <div class='icon-div'><img class="header-icon" src="assets/icons/name-icon.svg" alt="icon">
+                            </div>
+                            <div>
+                                <p class='field-title'>Site Name</p>
+                                <p class='field-value' id="site-name">Not Available</p>
+                            </div>
+                        </div>
+                        <div class="flex-row header-card">
+                            <div class='icon-div'><img class="header-icon" src="assets/icons/id-icon.svg" alt="icon">
+                            </div>
+                            <div>
+                                <p class='field-title'>Site ID</p>
+                                <p class='field-value' id='site-id'>Not Available</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 header-card-group">
+                        <div class="flex-row header-card">
+                            <div class='icon-div'><img class="header-icon" src="assets/icons/server-icon.svg"
+                                    alt="icon">
+                            </div>
+                            <div>
+                                <p class='field-title'>Server Connection</p>
+                                <p class='field-value' id="server-connection"></p>
+                            </div>
+                        </div>
+                        <div class='flex-row header-card'>
+                            <div class='icon-div'><img class="header-icon" src="assets/icons/voltage-icon.svg"
+                                    alt="icon">
+                            </div>
+                            <div>
+                                <p class='field-title'>System Voltage</p>
+                                <div>
+                                    <span class='field-value' id='system-voltage'></span><span>V</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 header-card-group">
+                        <div class='flex-row header-card'>
+                            <div class='icon-div'><img class="header-icon" src="assets/icons/date-time-icon.svg"
+                                    alt="icon">
+                            </div>
+                            <div>
+                                <p class='field-title'>Local Time & Date</p>
+                                <p class='field-value' id="time-and-date"></p>
+                            </div>
+                        </div>
+                        <div class="flex-row header-card btn-group">
+                            <a href="/dataAlarms">
+                                <img class="header-icon" src="assets/icons/alarm.svg" alt="icon">
+                                <span>Alarm(s):</span><span id="alarm-count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 header-card-group">
+                        <div class='flex-row header-card'>
+                            <div class='icon-div'><img class="header-icon" src="assets/icons/date-time-icon.svg"
+                                    alt="icon">
+                            </div>
+                            <div>
+                                <p class='field-title'>Internet Status</p>
+                                <p class='field-value' id="internet"></p>
+                            </div>
+                        </div>
+                        <div class="flex-row header-card btn-group logOut-btn-div">
+                            <a href="/logout">
+                                <button id="logOut-btn">Log Out</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-content-wrapper">
+
+                    <div class="row dashboard-inner-wrapper">
+
+                        <div class="col-sm-12 col-md-6 col-lg-3 col-wrapper flex-col" id="leftTenantColumn">
+
+                            <div class='tenant-card' id="tenant-1">
+                                <p class='card-header'>Tenant 1</p>
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/current-icon.svg" alt="icon"></span>
+                                        <span class='title'>Current</span>
+                                    </div>
+                                    <div class='value current-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/energy-icon.svg" alt="icon"></span>
+                                        <span class='title'>Energy</span>
+                                    </div>
+                                    <div class='value energy-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/power-icon.svg" alt="icon"></span>
+                                        <span class='title'>Power</span>
+                                    </div>
+                                    <div class='value power-value'></div>
+                                </div>
+                            </div>
+                            <div class='tenant-card' id="tenant-2">
+                                <p class='card-header'>Tenant 2</p>
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/current-icon.svg" alt="icon"></span>
+                                        <span class='title'>Current</span>
+                                    </div>
+                                    <div class='value current-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/energy-icon.svg" alt="icon"></span>
+                                        <span class='title'>Energy</span>
+                                    </div>
+                                    <div class='value energy-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/power-icon.svg" alt="icon"></span>
+                                        <span class='title'>Power</span>
+                                    </div>
+                                    <div class='value power-value'></div>
+                                </div>
+                            </div>
+                            <div class='tenant-card' id="tenant-3">
+                                <p class='card-header'>Tenant 3</p>
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/current-icon.svg" alt="icon"></span>
+                                        <span class='title'>Current</span>
+                                    </div>
+                                    <div class='value current-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/energy-icon.svg" alt="icon"></span>
+                                        <span class='title'>Energy</span>
+                                    </div>
+                                    <div class='value energy-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/power-icon.svg" alt="icon"></span>
+                                        <span class='title'>Power</span>
+                                    </div>
+                                    <div class='value power-value'></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-wrapper flex-col" id="generator-section">
+                            <div class='generator-details-div'>
+                                <div class='flex-row gensetCapacity-div'>
+                                    <div>
+                                        <p class='section-header'>Generator Set</p>
+                                    </div>
+                                    <div>
+                                        Genset Capacity: <span id="gensetCapacity"></span>
+                                    </div>
+                                </div>
+
+                                <div class='flex-row load-div'>
+
+                                    <div class="load-wrapper">
+                                        <p class="sub-header">L1</p>
+                                        <div class="load-sub-header">
+                                            <p>
+                                                <span>Current: </span>
+                                                <span class='value' id='l1-current'></span>
+                                            </p>
+
+                                            <p>
+                                                <span>Voltage:</span>
+                                                <span class='value' id="l1-voltage"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="load-wrapper">
+                                        <p class="sub-header">L2</p>
+                                        <div class="load-sub-header">
+                                            <p>
+                                                <span>Current: </span>
+                                                <span class='value' id='l2-current'></span>
+                                            </p>
+
+                                            <p>
+                                                <span>Voltage:</span>
+                                                <span class='value' id="l2-voltage"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="load-wrapper">
+                                        <p class="sub-header">L3</p>
+                                        <div class="load-sub-header">
+                                            <p>
+                                                <span>Current: </span>
+                                                <span class='value' id='l3-current'></span>
+                                            </p>
+
+                                            <p>
+                                                <span>Voltage:</span>
+                                                <span class='value' id="l3-voltage"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class='stats-div'>
+                                    <div id='frequency' class="item">
+                                        <div class="flex-row title">
+                                            <p>Frequency</p>
+                                            <p class='value' id='frequency-value'></p>
+                                        </div>
+                                        <div class='progress-bar-div' id="frequency-progress-bar">
+                                        </div>
+                                    </div>
+
+                                    <div id='power' class="item">
+                                        <div class="flex-row title">
+                                            <p>Power</p>
+                                            <p class='value' id='power-value'></p>
+                                        </div>
+                                        <div class='progress-bar-div' id="power-progress-bar">
+                                        </div>
+                                    </div>
+
+                                    <div id='run-hour' class="item">
+                                        <div class="flex-row title">
+                                            <p>Run Hour</p>
+                                            <p class='value' id='run-hour-value'></p>
+                                        </div>
+                                        <div class='progress-bar-div' id="run-hour-progress-bar">
+                                        </div>
+                                    </div>
+
+                                    <div id='energy' class="item">
+                                        <div class="flex-row title">
+                                            <p>Energy</p>
+                                            <p class='value' id='energy-value'></p>
+                                        </div>
+                                        <div class='progress-bar-div' id="energy-progress-bar">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class='gauges-div row'>
+                                <div class='col-md-6 guage-wrapper flex-col'>
+                                    <p>Battery Temperature (C)</p>
+                                    <div class='gauge' id="battery-temperature-gauge">
+                                    </div>
+                                </div>
+                                <div class='col-md-6 guage-wrapper flex-col'>
+                                    <p>Outside Temperature (C)</p>
+                                    <div class='gauge' id="outside-temperature-gauge">
+                                    </div>
+                                </div>
+                                <div class='col-md-6 guage-wrapper flex-col'>
+                                    <p>Outside Humidity (%)</p>
+                                    <div class='gauge' id="outside-humidity-gauge">
+                                    </div>
+                                </div>
+                                <div class='col-md-6 guage-wrapper flex-col'>
+                                    <p>Panel Door</p>
+                                    <div class='gauge' id="panel-door">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-3 col-wrapper flex-col" id="rightTenantColumn">
+                            <div class='tenant-card' id="tenant-4">
+                                <p class='card-header'>Tenant 4</p>
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/current-icon.svg" alt="icon"></span>
+                                        <span class='title'>Current</span>
+                                    </div>
+                                    <div class='value current-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/energy-icon.svg" alt="icon"></span>
+                                        <span class='title'>Energy</span>
+                                    </div>
+                                    <div class='value energy-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/power-icon.svg" alt="icon"></span>
+                                        <span class='title'>Power</span>
+                                    </div>
+                                    <div class='value power-value'></div>
+                                </div>
+                            </div>
+                            <div class='tenant-card' id="tenant-5">
+                                <p class='card-header'>Tenant 5</p>
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/current-icon.svg" alt="icon"></span>
+                                        <span class='title'>Current</span>
+                                    </div>
+                                    <div class='value current-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/energy-icon.svg" alt="icon"></span>
+                                        <span class='title'>Energy</span>
+                                    </div>
+                                    <div class='value energy-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/power-icon.svg" alt="icon"></span>
+                                        <span class='title'>Power</span>
+                                    </div>
+                                    <div class='value power-value'></div>
+                                </div>
+                            </div>
+                            <div class='tenant-card' id="tenant-6">
+                                <p class='card-header'>Tenant 6</p>
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/current-icon.svg" alt="icon"></span>
+                                        <span class='title'>Current</span>
+                                    </div>
+                                    <div class='value current-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/energy-icon.svg" alt="icon"></span>
+                                        <span class='title'>Energy</span>
+                                    </div>
+                                    <div class='value energy-value'></div>
+                                </div>
+
+                                <div class="tenant-details">
+                                    <div class="tenant-details-header">
+                                        <span class='icon-span'><img class="tenant-card-icon"
+                                                src="assets/icons/power-icon.svg" alt="icon"></span>
+                                        <span class='title'>Power</span>
+                                    </div>
+                                    <div class='value power-value'></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <footer>Powered by www.kmfconcept.com</footer>
+
+            </section>
+        </div>
+
+    </div>
+
+    <script src="js/axios.min.js"></script>
+    <script src="js/jquery.3.2.1.js"></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/navDisplay.js"></script>
+    <script src="js/newVerticalNavbar.js"></script>
+
+    <script src="js/dashboardData.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/generatorGauge.js"></script>
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/jsProgressGauge.js"></script>
+
+</body>
+
+</html>
